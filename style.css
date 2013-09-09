@@ -1,0 +1,73 @@
+BODY { background-color:#ffeeff; margin:0; padding:0; }
+
+.clear {border:0; width:0; height:0; margin:0; padding:0; font-size:0; line-height:0; clear:both;}
+header, nav, footer, article, hgroup, section {display:block;}
+.site { width:980px; margin:0 auto; background-color:#ffffff; padding:10px; }
+nav {float:left; width:15%; margin:0 40px 0 40px;}
+nav ul { padding: 0 0 0 15px; }
+section {float:left; width:75%; min-height:500px;}
+footer {clear:both;}
+footer p { text-align: center; }
+
+header a { outline:none; border:0; display:block; float:left; }
+header a img { width:225px; border:0; }
+header hgroup { float:left; }
+
+H2 { margin-top:10px; }
+.game_info { background-color: #CCCCCC; height: 350px; padding: 0 10px; width: 180px; position:absolute; top:0; left:550px; }
+.game_info h2 { font-size:20px; }
+
+.relative_box { position:relative; height:300px; }
+.abso_box { position:absolute; z-index:50; }
+.layout { background-color:#cccccc; opacity:0.6; display:block; height:350px; width:550px; z-index:49; }
+.relative_box .button {
+	position:absolute;
+	top:160px;
+	left:225px;
+	display:block;
+	height:30px;
+	width:100px;
+	line-height:30px;
+	text-align:center;
+	text-decoration:none;
+	color:#000000;
+	text-transform:uppercase;
+	font-weight:bold;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="ffce93", endColorstr="663234"); /* Pour IE seulement et mode gradient à linear */
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffce93), to(#663234));
+	background: -moz-linear-gradient(top center, #ffce93, #663234);
+	background: -o-linear-gradient(top center, #ffce93, #663234);
+	background: linear-gradient(top center, #ffce93, #663234);
+	-moz-box-shadow: 6px 6px 5px #888;
+  -webkit-box-shadow: 6px 6px 5px #888;
+	-o-box-shadow: 6px 6px 5px #888;
+  box-shadow: 6px 6px 5px #888;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+	opacity:1;
+	z-index:100;
+}
+.dialogue_box {
+  width:400px;
+	height:300px;
+	z-index:50;
+}
+.dialogue_box p {
+  font-family: sans-serif,arial;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 120px 0 0;
+  text-align: center;
+  text-decoration: blink;
+}
+.dialogue_box .button {
+  top:175px;
+}
+.label { display:inline; }
+.lifes_box { display:inline-block; margin:0 0 0 5px; }
+.lifes_box .lifes { display:inline-block; height:10px; width:35px; background:-moz-linear-gradient(top center, #eeeeee, #333333); background:-o-linear-gradient(top center, #eeeeee, #333333); margin:0 5px 0 0; -moz-border-radius:4px; -o-border-radius:4px; border:1px solid #090909; -moz-box-shadow: 3px 3px 6px #545454; -o-box-shadow: 3px 3px 6px #545454; }
+
+#canvas { position:absolute; top:0; left:0; z-index:1; }
+#canvasBG { position:absolute; top:0; left:0; z-index:0; }

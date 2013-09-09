@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+  <head>
+    <title>Mon super site HTML5</title>
+    <meta charset="utf-8">
+    <link href="style.css" media="screen" type="text/css" rel="stylesheet" />
+    
+    <script type="text/javascript">
+			document.createElement('header');
+			document.createElement('hgroup');
+			document.createElement('nav');
+			document.createElement('article');
+			document.createElement('footer');
+		</script>
+    <script type="text/javascript" src="lvl.js"></script>
+    <script type="text/javascript" src="bonus.js"></script>
+    <script type="text/javascript" src="balle.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+    
+  </head>
+  <body>
+  
+    <div class="site">
+    
+      <header>
+        <a href="/canvas/index.html">
+          <object type="image/svg+xml" data="images/logo_html5.svg" width="175px">
+            <img src="images/html5-logo-w3c.png" alt="home" />
+          </object>
+        </a>
+        <hgroup>
+          <h1>Site HTML5</h1>
+          <h2>tests</h2>
+        </hgroup>
+        <div class="clear"></div>
+      </header>
+      
+      <nav>
+        <h2></h2>
+        
+      </nav>
+      
+      <section>
+        <article>
+          <h2>Canvas</h2>
+          <p>Aujourd'hui, les canvas.</p>
+          <div class="relative_box" >
+            <a href="javascript:void(0);" onClick="startGame()" id="buttonstart" class="button">Start</a>
+            <div id="winpanel" class="abso_box dialogue_box">
+              <p>Gagné !!</p>
+              <a href="javascript:void(0);" onClick="initGame()" class="button">Re Start</a>
+            </div>
+            <div id="winlvlpanel" class="abso_box dialogue_box">
+              <p>Clear !!</p>
+              <a href="javascript:void(0);" onClick="initGame()" class="button">Next Lvl</a>
+            </div>
+            <div id="loosepanel" class="abso_box dialogue_box">
+              <p>Perdu !!</p>
+              <a href="javascript:void(0);" onClick="initGame()" class="button">Re Start</a>
+            </div>
+            <div id="layout" class="abso_box layout"></div>
+            <canvas id="canvas" width="550" height="350">Ce navigateur ne supporte pas les Canvas Html</canvas>
+            <canvas id="canvasBG" width="550" height="350"></canvas>
+            <div class="game_info" id="game_info">
+              <h2>Canvas Arkanoïd</h2>
+              <p>Level : <span id="level_info"></span></p>
+              <p class="label">Vies :</p>
+              <div class="lifes_box" id="lifes_box">
+
+              </div>
+              <p id="debug"></p>
+            </div>
+            
+          </div>
+        </article>
+      </section>
+      
+      <footer>
+        <p><small>copyright</small></p>
+      </footer>
+      
+      <script>
+        addEvent(window, 'mousemove', moveBarre);
+				addEvent(window, 'load', initGame);
+				addEvent(window, 'load', getPositionCanvas);
+				addEvent(window, 'resize', getPositionCanvas);
+				addEvent(document.getElementById('canvas'), 'click', shooter);
+      </script>
+      
+    </div>
+    
+  </body>
+  
+</html>
